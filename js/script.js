@@ -1,3 +1,8 @@
+var Chess_image=document.createElement("img");
+    Chess_image.setAttribute("src","img/chess.png");
+    Chess_image.setAttribute("width","64px");
+    Chess_image.setAttribute("height","64px");
+    Chess_image.setAttribute("id","my_img");
 function afficher(){
     
    var tt=document.createElement("table");
@@ -36,25 +41,60 @@ function afficher(){
    }
 //    alert(tt);
    document.getElementById("dv_Chess").appendChild(tt);
-   var Chess_image=document.createElement("img");
-    Chess_image.setAttribute("src","img/chess.png");
-    Chess_image.setAttribute("width","64px");
-    Chess_image.setAttribute("height","64px");
+   
     document.getElementById("1_1").appendChild(Chess_image)
+
+
+
 
 }
 function move_chess(direction){
+   
+    
+    var img=document.getElementById('my_img')
+    var parent_id= img.parentElement.id;
+
+    // var new_id=parent_id.replace(parent_id[2],parseInt(parent_id[2])+1);
     if(direction=="up"){
+        let new_idd=parseInt(parent_id[0])-parseInt(1);
+        // alert(parent_id[0]+"_"+new_idd)
+        document.getElementById(new_idd+"_"+parent_id[2]).appendChild(Chess_image);
+   
 
     }
     else if(direction=="down"){
+        let new_idd=parseInt(parent_id[0])+parseInt(1);
+        // alert(parent_id[0]+"_"+new_idd)
+        document.getElementById(new_idd+"_"+parent_id[2]).appendChild(Chess_image);
+   
 
     }
     else if(direction=="right"){
-        
+       
+        let new_idd=parseInt(parent_id[2])+parseInt(1);
+        // alert(parent_id[0]+"_"+new_idd)
+        document.getElementById(parent_id[0]+"_"+new_idd).appendChild(Chess_image);
     }
     else if(direction=="left"){
-
+        let new_idd=parseInt(parent_id[2])-parseInt(1);
+        // alert(parent_id[0]+"_"+new_idd)
+        document.getElementById(parent_id[0]+"_"+new_idd).appendChild(Chess_image);
+   
     }
 
 }
+
+
+function get_td_id(){
+    var pic=document.getElementById("")
+}
+
+
+
+
+
+
+
+
+
+
