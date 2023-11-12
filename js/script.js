@@ -3,6 +3,8 @@ var Chess_image=document.createElement("img");
     Chess_image.setAttribute("width","64px");
     Chess_image.setAttribute("height","64px");
     Chess_image.setAttribute("id","my_img");
+    Chess_image.setAttribute("draggable","true");
+    Chess_image.setAttribute("ondragstart","drag(event)");
 function afficher(){
     
    var tt=document.createElement("table");
@@ -17,6 +19,7 @@ function afficher(){
         { 
             var td=document.createElement("td")
             td.setAttribute("class","bayda")
+         
             // td.setAttribute("id","bayda")
 
             p=1;
@@ -27,6 +30,8 @@ function afficher(){
             p=0;
         }
         var id=i+"_"+c;
+        td.setAttribute("ondrop","drop(event)")
+        td.setAttribute("ondragover","allowDrop(event)")
         td.setAttribute("id",id)
 
         tr.appendChild(td);
@@ -89,8 +94,23 @@ function get_td_id(){
     var pic=document.getElementById("")
 }
 
+//trying the drag and drop for thos elements
 
 
+
+function allowDrop(ev) {
+    ev.preventDefault();
+  }
+  
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+  
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
 
 
 

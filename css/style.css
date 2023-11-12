@@ -38,5 +38,6 @@ flex-wrap: wrap;}
 
 .keys{
     border: solid 2px black;
+    cursor: pointer;
 
 }
