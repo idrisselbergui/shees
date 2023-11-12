@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body onload="afficher()">
+<body onload="afficher()" onkeydown="press(event)">
 
     <header>
         <div class="heade_container"></div>
@@ -18,10 +18,12 @@
             <div id="dv_Chess"></div>
 
             <div class="move">
-                <div onclick="move_chess('up')" class="keys up">up</div>
-                <div onclick="move_chess('left')" class="keys left">left</div>
-                <div onclick="move_chess('down')" class="keys down">down</div>
-                <div onclick="move_chess('right')" class="keys right">right</div>
+                <div onclick="move_chess('left')"  class="keys left"><img src="img/up.png" alt=""></div>
+             <div>  
+                <div onclick="move_chess('up')" class="keys up"><img src="img/up.png" alt=""></div>
+                <div onclick="move_chess('down')" class="keys down"><img src="img/up.png" alt=""></div>
+            </div>
+                <div onclick="move_chess('right')" class="keys right"><img src="img/up.png" alt=""></div>
             </div>
         </div>
 

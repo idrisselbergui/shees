@@ -4,12 +4,14 @@
     padding: 8px;
 }
 #dv_Chess{
-   width: 80%;
-   margin: auto;
+ /*  width: 80%;*/
+ align-items: center;
+ justify-content: center;
+   /* margin: auto;*/
 
 }
 #tb_Chess{
-    /* width: 100%; */
+     width: 100%; 
     
 }
 #tb_Chess td{
@@ -25,19 +27,38 @@ background-color: white;
 }
 .container{
 display: flex;
-flex-wrap: wrap;}
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;}
 .move{
-    width: 200px;
-    height: 35px;
+    
     display: flex;
-    flex-wrap: wrap;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     justify-content: space-around;
-    align-items: center;
+    
 }
 
 .keys{
-    border: solid 2px black;
+   /* border: solid 2px black;*/
     cursor: pointer;
 
 }
+.keys img{
+    height: 60px;
+    width: 60px;
+}
+.up{
+    transform: rotate(-90deg);
+}
+.down{
+    transform: rotate(90deg);
+}
+.left{
+    
+    transform: rotate(180deg);
+    display: flex;
+   
+}
+.left img{align-self: center;}
+.right{display: flex;}
+.right img{align-self: center;}

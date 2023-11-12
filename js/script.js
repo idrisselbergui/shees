@@ -1,7 +1,8 @@
 var Chess_image=document.createElement("img");
     Chess_image.setAttribute("src","img/chess.png");
-    Chess_image.setAttribute("width","64px");
-    Chess_image.setAttribute("height","64px");
+    Chess_image.setAttribute("width","100%");
+    Chess_image.setAttribute("height","100%");
+    Chess_image.setAttribute("marrgin","0px");
     Chess_image.setAttribute("id","my_img");
     Chess_image.setAttribute("draggable","true");
     Chess_image.setAttribute("ondragstart","drag(event)");
@@ -87,6 +88,24 @@ function move_chess(direction){
    
     }
 
+}
+function press(ev){
+    
+    let new_idd;
+    switch (ev.key){
+        case 'ArrowUp':
+            move_chess('up');
+            break;
+        case 'ArrowDown':
+            move_chess('down');
+            break;
+        case 'ArrowLeft':
+            move_chess('left');
+            break;
+        case 'ArrowRight':
+            move_chess('right');
+            break;
+    }
 }
 
 
